@@ -8,19 +8,25 @@ class Animal:
         self.is_alive = True
 
     def eat(self):
-        print(f"{self.name} is eating")
+        print(f"{self.name} is eating.")
 
     def sleep(self):
-        print(f"{self.name} is sleeping")
+        print(f"{self.name} is sleeping.")
+
+    def die(self):
+        print(f"{self.name} as died.")
 
 class Dog(Animal):
-    pass
+    def speak(self):
+        print("WOOF!")
 
 class Cat(Animal):
-    pass
+    def speak(self):
+        print("MEEW!")
 
 class Mouse(Animal):
-    pass
+    def speak(self):
+        print("WOOF!")
 
 dog = Dog("scobby")
 cat = Cat("jack")
@@ -30,9 +36,14 @@ mouse = Mouse("brown")
 print(dog.name)
 print(dog.is_alive)
 dog.eat()
+dog.die()
 
 print(mouse.name)
 print(mouse.is_alive)
 mouse.eat()
+mouse.die()
 
-
+print(cat.name)
+print(cat.is_alive)
+cat.eat()
+dog.die()
